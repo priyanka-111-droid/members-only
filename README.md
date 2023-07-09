@@ -5,7 +5,9 @@ This is a forum with 3 types of access modes - normal mode, special user and adm
 
 Objectives:
 * made express app using express-generator
+* used dotenv to secure database url.
+* used express-validator to sanitize inputs
 * used MVC model
 * used passport.js to login
 * used bcryptjs to encrypt passwords
-* used dotenv to secure database url.
+
