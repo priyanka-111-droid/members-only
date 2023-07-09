@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>MembersOnly</h1>
+    <div class="message-form">
+      <h2><%= title %></h2>
+      <% if (locals.errors) { %>
+        <div class="errors">
+        <%for (const err of errors){ %>
+            <p class="error"><%=err.msg%></p>
+          <%}%>
+        </div>
+        <%}%>
+      <form action="" method="POST" id="message-form">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title">
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" rows="18" cols="60"></textarea>
+      </form>
+      <button type="submit" form="message-form">Send Message</button>
+    </div>
+  </body>
+</html>

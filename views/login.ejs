@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>MembersOnly</h1>
+    <div class="login">
+      <% if (locals.errors) { %>
+        <div class="errors">
+        <%for (const err of errors){ %>
+            <p class="error"><%=err.msg%></p>
+          <%}%>
+        </div>
+        <%}%>
+      <form action="" method="POST" id="login">
+        <label for="email">Email:</label>
+          <input type="email" id="email" name="username" required>
+        <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required minlength="6">
+        </form>
+        <p>Don't have an account? <a href="/sign-up">Sign Up</a></p>
+      <button type="submit" form="login">Log In</button>
+    </div>
+  </body>
+</html>

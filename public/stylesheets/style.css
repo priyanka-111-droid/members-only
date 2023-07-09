@@ -1,0 +1,234 @@
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/NunitoSans-Italic-VariableFont_YTLC\,opsz\,wdth\,wght.ttf");
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Black.ttf");
+}
+
+@font-face {
+  font-family: "Lato-Thin";
+  src: url("../fonts/Lato-Light.ttf");
+}
+
+*{
+  margin: 0;
+}
+
+body{
+  background-color: #B98EA7;
+  padding: 60px;
+}
+
+h1{
+  color: #120D31;
+  font-family: "Nunito", sans-serif;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+h2{
+  font-size: 32px;
+  font-family: "Nunito", sans-serif;
+}
+
+.sign-up h2,
+.login h2{
+  margin-bottom: 20px;
+}
+
+.sign-up,
+.join,
+.login,
+.message-form,
+.messages,
+.admin,
+.confirm-delete{
+  background-color: #F0D3F7;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.confirm-delete{
+  margin-top: 20px;
+}
+
+.messages{
+  align-items: flex-start;
+}
+
+form{
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 24px
+}
+input{
+  height: 32px;
+  font-size: 24px;
+  margin-left: 24px;
+}
+
+textarea{
+  font-size: 24px;
+  font-family: sans-serif;
+}
+
+label{
+  font-size: 24px;
+  font-family: "Lato", sans-serif;
+}
+
+.error{
+  color: red;
+  font-size: 18px;
+  font-family: "Nunito", sans-serif;
+}
+
+.errors{
+  margin-bottom: 20px;
+}
+
+button{
+  background-color: #120D31;
+  color: white;
+  margin-top: 24px;
+  padding: 12px 24px;
+  outline: none;
+  border-radius: 12px;
+  border: none;
+  font-size: 20px;
+  font-family: "Lato-Thin", sans-serif;
+  cursor: pointer;
+  transition: 0.2s ease-in background-color;
+}
+
+button:hover{
+  background-color: #34239c;
+}
+
+.join p,
+.admin p{
+  font-family: "Lato-Thin";
+  font-size: 20px;
+}
+
+.join h2,
+.admin h2{
+  margin-bottom: 8px;
+}
+
+.enter-secret{
+  margin-top: 20px;
+}
+
+.join input,
+.admin input{
+  margin-top: 18px;
+}
+
+.join-form,
+.admin-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.secret{
+  border: 5px solid black;
+  background-color: white;
+  font-size: 24px;
+  font-family: "Nunito", sans-serif;
+  max-width: 300px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.secret-container{
+  transform: translate(-350px, 420px);
+  cursor: pointer;
+}
+
+.secret-container:hover .secret{
+  cursor: pointer;
+  transform: translate(57vw, -40vh);
+  transition: 0.4s ease-in all;
+}
+
+.login p{
+  font-size: 18px;
+  font-family: "Nunito", sans-serif;
+  margin-top: 20px;
+}
+
+a{
+  color: #120D31;
+}
+
+a:visited{
+  color: #120D31;
+}
+
+a:hover{
+  color: #34239c;
+}
+
+.welcome{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.welcome button{
+  margin-top: 0;
+}
+
+.send-message{
+  margin-left: auto;
+}
+
+.hide{
+  display: none;
+}
+
+.messages{
+  margin-top: 20px;
+}
+
+.message{
+  border-bottom: 3px solid #34239c;
+  width: 100%;
+  padding: 12px 0;
+  color: #120D31;
+}
+
+.message p{
+  font-family: "Lato-Thin";
+  font-size: 24px;
+}
+
+.message .header{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.message h2{
+  margin-right: auto;
+}
+
+.bin{
+  cursor: pointer;
+  height: 22px;
+}
+
+.confirm,
+.cancel{
+  width: 180px;
+}

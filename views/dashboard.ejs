@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+        <h1>MembersOnly</h1>
+        <div class="welcome">
+            <h2>Hi <%=locals.currentUser.first_name%> <%=locals.currentUser.last_name%>!</h2>
+            <button onclick="location.href='/logout'">Log Out</button>
+            <button class="send-message" onclick="location.href='/new-message'">Send Message</button>
+            <button class="<%=currentUser.member ? 'hide' : 'join-button'%>" onclick="location.href='/join'">Join The Club!</button>
+            <button class="<%=currentUser.admin ? 'hide' : 'admin-button'%>" onclick="location.href='/admin'">Become an Admin!</button>
+        </div>
+        <div class="messages">
+          <% for (const message of messages){%>
+            <div class="message" id="<%=message._id%>">
+              <div class="header">
+                <h2><%=message.title%></h2>
+                <p class="<%=locals.currentUser.member ? '' : 'hide'%>"><em><%=message.author.full_name%></em></p>
+                <p class="<%=locals.currentUser.member ? '' : 'hide'%>"><em><%=message.date_formatted%></em></p>
+                <p class="<%=locals.currentUser.member ? 'hide' : ''%>"><em>?????</em></p>
+                <img  class="<%=locals.currentUser.admin ? 'bin' : 'hide'%>" src="/images/rubbish-bin-svgrepo-com.svg" alt="Delete" onclick="location.href='/<%=message._id%>/delete'">
+              </div>
+              <p><%=message.content%></p>
+            </div>
+            <%}%>
+        </div>
+        <div class="confirm-delete hide">
+          <h2>Are you sure you want to delete this message?</h2>
+          <div class="buttons">
+            <button class="confirm">Yes</button>
+            <button class="cancel">Cancel</button>
+          </div>
+        </div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Join Club</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="outer">
+        <h1>MembersOnly</h1>
+        <div class="join">
+          <h2>Join Our Club</h2>
+          <p><em>Shhhh! It's a secret!</em></p>
+          <h2 class="enter-secret">Enter the secret password:</h2>
+          <p>Hint: It's hidden on this page!</p>
+          <% if (locals.error){%>
+            <h3 class="error"><%=locals.error%></h3>
+            <%}%>
+          <form action="" method="POST" class="join-form">
+            <input type="password" name="password">
+            <button>Join</button>
+          </form>
+        </div>
+        <div class="secret-container">
+            <div class="secret">Secret: OdinProject123</div>
+        </div>
+    </div>
+  </body>
+</html> 

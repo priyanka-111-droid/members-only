@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Become an Admin</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+        <h1>MembersOnly</h1>
+        <div class="admin">
+          <h2>Become an Admin</h2>
+          <p><em>Then you can delete messages!</em></p>
+          <h2 class="enter-secret">Enter the secret password:</h2>
+          <% if (locals.error){%>
+            <h3 class="error"><%=locals.error%></h3>
+            <%}%>
+          <form action="" method="POST" class="admin-form">
+            <input type="password" name="password">
+            <button>Submit</button>
+          </form>
+        </div>
+  </body>
+</html>
